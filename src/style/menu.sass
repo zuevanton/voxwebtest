@@ -1,0 +1,152 @@
+.popup
+  &-wrap
+    width: 100%
+    min-height: 100%
+    background-color: rgba(0,0,0,0.3)
+    overflow: hidden
+    position: fixed
+    top: 0
+    z-index: 10
+    transition: .3s
+    visibility: hidden
+    opacity: 0
+    &_active
+      visibility: visible
+      opacity: 1
+      .popup-content
+        transform: translateX(0)
+  &-content
+    float: right
+    height: 100vh
+    width: 530px
+    background: $main-color
+    z-index: 11
+    transform: translateX(-100%)
+    transition: .3s
+    padding-top: 100px
+    position: relative
+    .container
+      max-width: 280px
+      margin: 0 auto
+      height: 100vh
+.customselect
+  background-color: #ffffff
+  border-radius: 30px
+  font-size: 12px
+  line-height: 14px
+  color: #010101
+  &__title
+    width: 100%
+    border: none
+    position: relative
+    background-color: #ffffff
+    border-radius: 30px
+    padding-top: 13px
+    padding-bottom: 13px
+    padding-left: 30px
+    text-align: left
+    cursor: pointer
+    &:after
+      content: url("../img/arrow.png")
+      position: absolute
+      right: 23px
+      top: 14px
+      transform: rotate(90deg)
+    &_active
+      &:after
+        transform: rotate(-90deg)
+  &__list
+    display: none
+    .title_opened
+      .list__country
+        display: block
+      .list__link
+        display: block
+  .list_opened
+    display: block
+  .list
+    padding-left: 30px
+    padding-right: 48px
+    &__country
+      display: none
+      font-size: 14px
+      line-height: 30px
+      cursor: pointer
+      padding-left: 14px
+      &:hover
+        background: rgba(196, 196, 196, 0.3)
+        border-radius: 15px
+    &__link
+      display: none
+      font-size: 10px
+      line-height: 30px
+      color: $main-color
+      text-transform: uppercase
+    &__title
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      margin-bottom: 7px
+      cursor: pointer
+  .chosedate__text
+    margin-top: 20px
+    padding-bottom: 18px
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+.customselect_date
+  margin-top: 18px
+.customselect_travel
+  margin-top: 18px
+  .travel
+    &__list
+      font-size: 14px
+      line-height: 30px
+      padding-left: 37px
+      padding-right: 40px
+      padding-bottom: 30px
+    &__type
+      cursor: pointer
+      padding-left: 9px
+      &:hover
+        background: rgba(196, 196, 196, 0.3)
+        border-radius: 15px
+.menu
+  margin-top: 70px
+  display: flex
+  flex-direction: column
+  font-weight: bold
+  font-size: 18px
+  line-height: 22px
+  text-align: center
+  letter-spacing: 0.1em
+  color: #141414
+  text-transform: uppercase
+  &__item
+    margin-bottom: 10px
+  &-footer
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding-bottom: 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__link
+      font-weight: bold
+      font-size: 24px
+      line-height: 29px
+      letter-spacing: 0.1em
+      color: #141414
+      margin-bottom: 20px
+    &__btn
+      border: 1px solid #000000
+      border-radius: 30px
+      background-color: transparent
+      width: 280px
+      padding-top: 17px
+      padding-bottom: 17px
+      cursor: pointer
+      text-transform: uppercase

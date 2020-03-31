@@ -1,0 +1,44 @@
+$main-color: #FFD241
+$red-color: #CB0037
+*
+  margin: 0
+  padding: 0
+  outline: none
+  box-sizing: border-box
+
+body
+  font-family: 'Museo Sans', sans-serif
+  font-weight: 400
+  padding-bottom: 160px
+.section-title
+  text-transform: uppercase
+  text-align: center
+  font-size: 36px
+  font-weight: bold
+  &_header
+    margin-bottom: 46px
+  &_form
+    margin-bottom: 70px
+    text-transform: none
+.container
+  margin: 0 auto
+  max-width: 780px
+img
+  max-width: 100%
+a
+  text-decoration: none
+  color: inherit
+fieldset
+  padding: 0
+  border: none
+
+@import "pickmeup"
+@import "header"
+@import "travel-cards"
+@import "form"
+@import "menu"
+.hidden
+  display: none
+@media(max-width: 576px)
+  .popup-content
+    width: 100%

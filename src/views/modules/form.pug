@@ -1,0 +1,63 @@
+section.form-wrap.container
+  form(action="#").form
+    .form-item
+      .form-item__title-wrap
+        h3.form-item__title Немного о вас
+      .form-item__block
+        label(for="name").form-item__label.form-item__label_required имя
+          span.form__required &nbsp;*
+        input(type="text" id="name").form-item__input.input_required
+        span.required__text.hidden Укажите имя
+      .form-item__block
+        label(for="phone").form-item__label телефон
+        input(type="phone" id="phone" placeholder="+7___ ___ __ __").form-item__input
+    .form-item
+      .form-item__title-wrap
+        h3.form-item__title О путешествии
+      .form-item__block
+        label(for="place").form-item__label.form-item__label_required куда и когда хотите поехать?
+          span.form__required &nbsp;*
+        input(type="text" id="place" placeholder="Континент, страна или город").form-item__input.input_required
+        span.required__text.hidden Укажите континент, страну или город
+      .form-item__block
+        label(for="time").form-item__label когда?
+        input(type="text" id="time" placeholder="Даты или временной интервал").form-item__input
+    .form-item.form-item_small
+      .form-item__title-wrap
+        h3.form-item__title Удобный способ связи
+      .form-item__checkbox-block
+        label.form-item__label viber
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label whatsapp
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label почта
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label телефон
+          input(type="checkbox").form-item__checkbox
+    .form-item.form-item_small
+      .form-item__title-wrap
+        h3.form-item__title Откуда узнали о нас
+      .form-item__checkbox-block.form-item__checkbox-block_right
+        label.form-item__label интернет
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label рекомендовали друзья
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label соц. сети
+          input(type="checkbox").form-item__checkbox
+        label.form-item__label уже ездил
+          input(type="checkbox").form-item__checkbox
+    .form-item
+      .form-item__consent
+        label.consent__title Получать свежие предложения по электронной почте
+          input(type="checkbox").consent__checkbox
+        p.consent__descr
+          | Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников.
+          | Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+      .form-item__consent
+        label(for="personal-data").consent__title С обработкой своих персональных данных согласен.
+          input(type="checkbox" id="personal-data").consent__checkbox.input_required
+        p.consent__descr Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+    p.form__descr
+      span.form__required *&nbsp;
+      | Поля, которые надо обязательно заполнить
+    button.form__submit Отправить

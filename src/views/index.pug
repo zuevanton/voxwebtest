@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+  head
+    title vox Webs
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width initial-scale=1")
+    link(href="./css/normalize.css" rel="stylesheet")
+    link(href="./css/fonts.css" rel="stylesheet")
+  body
+    include modules/mixin
+    include modules/header
+    a.menu-btn(href='#')
+      span.menu-btn__span
+    h2.section-title.section-title_header Зимбабве
+    include modules/travelCards
+    h2.section-title.section-title_form Заявка на подбор путешествия
+    include modules/form
+    include modules/menu
+    script(src="js/pickmeup.min.js")

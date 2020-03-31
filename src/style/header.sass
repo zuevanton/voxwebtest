@@ -1,0 +1,44 @@
+.header
+  margin-bottom: 46px
+.header-container
+  background: $main-color
+  height: 70px
+.menu-btn
+  display: block
+  width: 30px
+  height: 22px
+  position: fixed
+  top: 23px
+  right: 23px
+  z-index: 13
+  .menu-btn__span
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    width: 30px
+    height: 4px
+    transition: .4s
+    background-color: #000000
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 50%
+      margin-top: -2px
+      width: 30px
+      height: 5px
+      background-color: #000000
+      transition: .4s
+    &:before
+      transform: translateY(-9px)
+    &:after
+      transform: translateY(9px)
+  &_active
+    transition: .4s
+    .menu-btn__span
+      background-color: transparent
+      &:before
+        transform: rotate(135deg)
+        background-color: #ffffff
+      &:after
+        transform: rotate(45deg)
+        background-color: #ffffff

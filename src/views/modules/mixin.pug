@@ -1,0 +1,31 @@
+mixin travelCard(img, price, link, country, title, cities, options, special)
+  .travel-card
+    .travel-card__header
+      img.travel-card__img(src=img alt=title)
+      .travel-card__price #{price} &#8381;
+      a.travel-card__link(href=link)
+    .travel-card__text
+      p.travel-card__country= country
+      h2.travel-card__title
+        a(href=link) #{title}
+      if cities
+        p.travel-card__cities
+          each city, index in cities
+            if index === cities.length - 1
+              span #{city}
+            else
+              span #{city} —&nbsp;
+      p.travel-card__options.
+        #{options.days} дней / #{options.nights} ночей  #{options.language} язык
+      p.travel-card__options= options.date
+        if options.moreDate
+          #{options.country} #{options.moreDate}
+      if special
+        p.travel-card__special= special
+
+mixin countryList(title, link, countries)
+  .list
+    h3.list__title= title
+    each country in countries
+      .list__country= country
+    a(href=link).list__link все туры на континенте

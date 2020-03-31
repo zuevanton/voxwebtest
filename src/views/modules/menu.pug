@@ -1,0 +1,40 @@
+.popup-wrap
+  .popup-content
+    .container
+      .customselect
+        button.customselect__title#country-btn Страны
+        .customselect__list#country-list
+          +countryList('Южная Америка', '#',['Аргентина', 'Бразилия', 'Перу', 'Уругвай'])
+          +countryList('Северная Америка', '#', ['США', 'Канада', 'Мексика'])
+          +countryList('Африка', '#', ['Алжир', 'Ботсвана', 'Гамбия', 'Египет', 'Замбия', 'Зимбабве', 'Кения', 'Мадагаскар'])
+          +countryList('Азия', '#', ['Вьетнам', 'Казахстан', 'Лаос', 'Шри-Ланка', 'Япония', 'Южная Корея', 'Филиппины', 'Непал'])
+          +countryList('Европа', '#', ['Франция', 'Чехия', 'Италия', 'Германия', 'Англия'])
+
+      .customselect.customselect_date
+        button.customselect__title#calendar-btn Даты
+        #calendar-cnt.hidden
+          .calendar
+          p.chosedate__text Выберите дату не позднее которой хотите вернуться
+
+      .customselect.customselect_travel
+        button.customselect__title#travel-type-btn Тип путешествия
+        #travel-type-cnt.hidden
+          .travel__list
+            .travel__type Активный
+            .travel__type Майские
+            .travel__type На авто
+            .travel__type На корабле
+            .travel__type Новый год
+            .travel__type Поход
+            .travel__type Серфинг
+            .travel__type Эксклюзив
+            .travel__type Экскурсионный
+            .travel__type Экспедиция
+      nav.menu
+        a(href="#").menu__item путешествия
+        a(href="#").menu__item о нас
+        a(href="#").menu__item отзывы
+        a(href="#").menu__item блог
+      .menu-footer
+        a(href="tel+74951234567").menu-footer__link +7 (495) 123-45-67
+        button.menu-footer__btn Подберите мне тур
